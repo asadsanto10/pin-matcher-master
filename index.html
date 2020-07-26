@@ -5,41 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pin Generator</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input class="form-control" type="text">
-                    <button class="generate-btn">Generate Pin</button>
+                    <input readonly id="displayNumber" class="form-control text-center text-light" placeholder="Please Click the generate button" type="text">
+                    <button id="generateRandomNumberBtn" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input class="form-control" type="text">
+                    <input placeholder="Please enter the 6 digit number" readonly id="displayInputNumber" class="form-control text-center text-light" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="button">7</div>
-                              <div class="button">8</div>
-                              <div class="button">9</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">7</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">8</div>
+                              <div class="button number" onclick="" value="9">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">4</div>
-                              <div class="button">5</div>
-                              <div class="button">6</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">4</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">5</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">6</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button">1</div>
-                              <div class="button">2</div>
-                              <div class="button">3</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)" ">1</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">2</div>
+                              <div class="button number" onclick="numberInput(this.innerHTML)">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button"><</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
+                                <div id="backspace" class="button" ><</div>
+                                <div class="button number" onclick="numberInput(this.innerHTML)">0</div>
+                                <div id="clear" class="button">C</div>
                             </div>
                             <div>
                                 <button type="submit" class="submit-btn">Submit</button>
