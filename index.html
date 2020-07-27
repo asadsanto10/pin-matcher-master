@@ -18,13 +18,13 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input placeholder="Please enter the 6 digit number" readonly id="displayInputNumber" class="form-control text-center text-light" type="text">
+                    <input onkeyup="success()" placeholder="Please enter the 6 digit number" readonly id="displayInputNumber" class="form-control text-center text-light" type="text">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
                               <button class="button number" onclick="numberInput(this.innerHTML)">7</button>
                               <button class="button number" onclick="numberInput(this.innerHTML)">8</button>
-                              <button class="button number" onclick="" value="9">9</div>
+                              <button class="button number" onclick="numberInput(this.innerHTML)" value="9">9</div>
                             </div>
                             <div class="calc-button-row">
                               <button class="button number" onclick="numberInput(this.innerHTML)">4</button>
@@ -44,7 +44,7 @@
                                     class=" button">C</button>
                             </div>
                             <div>
-                                <button type="submit" id="submit" onclick="clicksubmit()" class="submit-btn">Submit</button>
+                                <button disabled type="submit" id="submit" onclick="submit()" class="submit-btn">Submit</button>
                                 <p class="action-left"><span id="tryLeft">3</span> try left</p>
                             </div>
                     </div>
@@ -52,8 +52,8 @@
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify">❌ Pin Didn't Match, Please try again</p>
-            <p class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p class="notify d-none" id="wrongMessage">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify d-none" id="sucessMessage">✅ Pin Matched... Secret door is opening for you</p>
         </div>
     </div>
     <script src="js/main.js"></script>
