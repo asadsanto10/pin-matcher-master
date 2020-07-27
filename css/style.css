@@ -6,7 +6,12 @@ body {
     background: #10101B;
     height: 100vh;
 }
-
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 solid transparent;
+}
 .container {
     margin-top: 30px;
 }
@@ -34,6 +39,7 @@ body {
 .generate-btn:focus {
     outline: none;
     box-shadow: none;
+    border: 8px solid #39458C;
 }
 
 input[type='text'] {
@@ -80,21 +86,34 @@ input[type='text']:focus {
     margin-right: -4px;
     border-radius: 10px;
     cursor: pointer;
+    border: 0 solid transparent !important;
+    transition: all 0.3s ease;
+}
+.button:hover{
+    background: #3d4153;
 }
 
+button[disabled] {
+    background: #425062 !important;
+    pointer-events: auto ! important;
+    cursor: not-allowed ! important;
+}
 .blink-me {
     color: #E0B612;
 }
 
 .submit-btn {
     border: none;
-    margin-top: 20px;
+    margin-top: 7px;
     padding: 10px 120px;
     border-radius: 5px;
     background: #495BC3;
     color: #fff;
+    transition: all 0.3s ease;
 }
-
+.submit-btn:hover{
+    background: #39458c;
+}
 .notify {
     color: #fff;
     text-align: center;

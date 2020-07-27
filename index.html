@@ -22,28 +22,30 @@
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
-                              <div class="button number" onclick="numberInput(this.innerHTML)">7</div>
-                              <div class="button number" onclick="numberInput(this.innerHTML)">8</div>
-                              <div class="button number" onclick="" value="9">9</div>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">7</button>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">8</button>
+                              <button class="button number" onclick="" value="9">9</div>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button number" onclick="numberInput(this.innerHTML)">4</div>
-                              <div class="button number" onclick="numberInput(this.innerHTML)">5</div>
-                              <div class="button number" onclick="numberInput(this.innerHTML)">6</div>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">4</button>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">5</button>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">6</button>
                             </div>
                             <div class="calc-button-row">
-                              <div class="button number" onclick="numberInput(this.innerHTML)" ">1</div>
-                              <div class="button number" onclick="numberInput(this.innerHTML)">2</div>
-                              <div class="button number" onclick="numberInput(this.innerHTML)">3</div>
+                              <button class="button number" onclick="numberInput(this.innerHTML)" ">1</button>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">2</button>
+                              <button class="button number" onclick="numberInput(this.innerHTML)">3</button>
                             </div>
                             <div class="calc-button-row">
-                                <div id="backspace" class="button" ><</div>
-                                <div class="button number" onclick="numberInput(this.innerHTML)">0</div>
-                                <div id="clear" class="button">C</div>
+                                <button id="backspace" class="button" onclick="clearBackspaceButton(this.innerText)">
+                                    <</button>
+                                <button class="button number" onclick="numberInput(this.innerHTML)">0</button>
+                                <button id="clear" onclick="clearBackspaceButton(this.innerText)"
+                                    class=" button">C</button>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button type="submit" id="submit" onclick="clicksubmit()" class="submit-btn">Submit</button>
+                                <p class="action-left"><span id="tryLeft">3</span> try left</p>
                             </div>
                     </div>
                 </div>

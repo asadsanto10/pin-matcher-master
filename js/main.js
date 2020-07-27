@@ -12,17 +12,27 @@ function numberInput(value) {
         document.getElementById('displayInputNumber').value = document.getElementById('displayInputNumber').value + value;
     }
 }
-// clear display
-document.getElementById('clear').addEventListener('click', function(){
-   displayInputNumber = document.getElementById('displayInputNumber').value = '';
-});
 
-// backspace display
-document.getElementById('backspace').addEventListener('click', function () {
-    let displayInputNumber = document.getElementById('displayInputNumber').value;
-    // let numberLenght = displayInputNumber.toString().length;
-    // let sd = numberLenght - 1;
-    console.log(displayInputNumber.substr(0, displayInputNumber - 2));
-    // numberLenght = numberLenght.substr(0, numberLenght - 1);
-    // document.getElementById('displayInputNumber').value = numberLenght;
-});
+// clear and backspace button function
+function clearBackspaceButton(buttonCondition){
+    if (buttonCondition == '<') {
+        let displayInputNumber = document.getElementById('displayInputNumber');
+        var numberLenght = displayInputNumber.value.substring(0, displayInputNumber.value.length - 1)
+        document.getElementById('displayInputNumber').value = numberLenght;
+    }
+    else if (buttonCondition == 'C') {
+        displayInputNumber = document.getElementById('displayInputNumber').value = '';
+    }
+}
+
+// try lefet function
+var count = 0;
+console.log(count);
+function clicksubmit() {
+    count += 1;
+    document.getElementById('tryLeft').innerHTML = Math.abs(count - 3);
+    var btn = document.getElementById('submit');
+    if (count >= 3) {
+        btn.disabled = true;
+    }
+}
