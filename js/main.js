@@ -2,6 +2,13 @@
 document.getElementById('generateRandomNumberBtn').addEventListener('click', function () { 
     let randomNumber = Math.floor(100000 + Math.random() * 900000);
     document.getElementById('displayNumber').value = randomNumber;
+
+/*============= when input field is null than disable submit button ==================*/
+    if (document.getElementById("displayInputNumber").value === "") {
+        document.getElementById('submit').disabled = true;
+    } else {
+        document.getElementById('submit').disabled = false;
+    }
 });
 
 /*================ display number input =================*/
@@ -24,15 +31,6 @@ function clearBackspaceButton(buttonCondition){
         displayInputNumber = document.getElementById('displayInputNumber').value = '';
     }
 }
-
-/*============= when input field is null than disable submit button ==================*/
-document.getElementById('disable').addEventListener('click',function(){
-    if (document.getElementById("displayInputNumber").value === "") {
-        document.getElementById('submit').disabled = true;
-    } else {
-        document.getElementById('submit').disabled = false;
-    }
-});
 
 /*=============== pin match function ================*/ 
 function submit(){
