@@ -13,28 +13,30 @@
             <div class="col-md-6">
                 <div class="pin-generator half-width">
                     <input readonly id="displayNumber" class="form-control text-center text-light" placeholder="Please Click the generate button" type="text">
-                    <button id="generateRandomNumberBtn" class="generate-btn">Generate Pin</button>
+                    <button id="generateRandomNumberBtn" onclick="" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input onkeyup="success()" placeholder="Please enter the 6 digit number" readonly id="displayInputNumber" class="form-control text-center text-light" type="text">
+                    <input placeholder="Please enter the 6 digit number" readonly id="displayInputNumber" class="form-control text-center text-light" type="text">
                     <div class="numbers">
                         <div class="calc-body">
-                            <div class="calc-button-row">
-                              <button class="button number" onclick="numberInput(this.innerHTML)">7</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)">8</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)" value="9">9</div>
-                            </div>
-                            <div class="calc-button-row">
-                              <button class="button number" onclick="numberInput(this.innerHTML)">4</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)">5</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)">6</button>
-                            </div>
-                            <div class="calc-button-row">
-                              <button class="button number" onclick="numberInput(this.innerHTML)" ">1</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)">2</button>
-                              <button class="button number" onclick="numberInput(this.innerHTML)">3</button>
+                            <div id="disable">
+                                <div class="calc-button-row">
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">7</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">8</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">9</button>
+                                </div>
+                                <div class="calc-button-row">
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">4</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">5</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">6</button>
+                                </div>
+                                <div class="calc-button-row">
+                                    <button class="button number" onclick="numberInput(this.innerHTML)" ">1</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">2</button>
+                                    <button class="button number" onclick="numberInput(this.innerHTML)">3</button>
+                                </div>
                             </div>
                             <div class="calc-button-row">
                                 <button id="backspace" class="button" onclick="clearBackspaceButton(this.innerText)">
@@ -45,8 +47,9 @@
                             </div>
                             <div>
                                 <button disabled type="submit" id="submit" onclick="submit()" class="submit-btn">Submit</button>
-                                <p class="action-left"><span id="tryLeft">3</span> try left</p>
+                                <p class="action-left d-none" id="tryShow"><span id="tryLeft">3</span> try left</p>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -25,9 +25,32 @@ function clearBackspaceButton(buttonCondition){
     }
 }
 
+/*============= when input field is null than disable submit button ==================*/
+document.getElementById('disable').addEventListener('click',function(){
+    if (document.getElementById("displayInputNumber").value === "") {
+        document.getElementById('submit').disabled = true;
+    } else {
+        document.getElementById('submit').disabled = false;
+    }
+});
+
+/*=============== pin match function ================*/ 
+function submit(){
+    var generatePinNumber = document.getElementById('displayNumber').value;
+    var inputNumber = displayInputNumber = document.getElementById('displayInputNumber').value;
+    if (generatePinNumber == inputNumber){
+        document.getElementById('sucessMessage').classList.add('d-block');
+        document.getElementById('submit').disabled = true;
+    }
+    else{
+        document.getElementById('wrongMessage').classList.add('d-block');
+        document.getElementById('tryShow').classList.add('d-block');
+    }
+}
+
 /*============= try lefet function ==================*/
 var count = 0;
-document.getElementById('submit').addEventListener('click', function(){
+document.getElementById('submit').addEventListener('click', function () {
     count += 1;
     document.getElementById('tryLeft').innerHTML = Math.abs(count - 3);
     var btn = document.getElementById('submit');
@@ -35,30 +58,3 @@ document.getElementById('submit').addEventListener('click', function(){
         btn.disabled = true;
     }
 });
-
-// var inputNumber = displayInputNumber = document.getElementById('displayInputNumber').value;
-// if (inputNumber.length === 0) {
-//     console.log('true');
-// }
-
-function success() {
-    if (document.getElementById("displayInputNumber").value === "") {
-        document.getElementById('submit').disabled = true;
-    } else {
-        document.getElementById('submit').disabled = false;
-    }
-}
-
-/*=============== pin match function ================*/ 
-function submit(){
-    var generatePinNumber = document.getElementById('displayNumber').value;
-    var inputNumber = displayInputNumber = document.getElementById('displayInputNumber').value;
-    // if (generatePinNumber == inputNumber){
-    //     document.getElementById('sucessMessage').classList.add('d-block');
-    //     console.log('true');
-    // }
-    // else{
-    //     document.getElementById('wrongMessage').classList.add('d-block');
-    //     console.log('false');
-    // }
-}
