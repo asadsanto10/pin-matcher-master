@@ -37,12 +37,13 @@ function submit(){
     var generatePinNumber = document.getElementById('displayNumber').value;
     var inputNumber = displayInputNumber = document.getElementById('displayInputNumber').value;
     if (generatePinNumber == inputNumber){
-        document.getElementById('sucessMessage').classList.add('d-block');
+        document.getElementById('sucessMessage').style.display = 'block';
+        document.getElementById('wrongMessage').style.display = 'none';
         document.getElementById('submit').disabled = true;
     }
     else{
-        document.getElementById('wrongMessage').classList.add('d-block');
-        document.getElementById('tryShow').classList.add('d-block');
+        document.getElementById('wrongMessage').style.display = 'block';
+        document.getElementById('tryShow').style.display = 'block';
     }
 }
 
